@@ -149,7 +149,7 @@ Replace the following placeholders:
 
 ## Author
 
-**Natassha Cua**  
+**Jhomar John Picar**  
 Aspiring Full-Stack Web Developer
 
 ### Professional Links
