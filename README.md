@@ -1,18 +1,20 @@
 # Personal Portfolio
 
-A responsive personal portfolio website by **Natassha Cua**, built as part of the MST Connect PH Full-Stack Web Development Bootcamp. The site introduces me as an aspiring full-stack web developer and showcases my current skills, projects, contact information, and professional links.
+A responsive personal portfolio website by **Jhomar John Picar**
+built as part of the MST Connect PH Full-Stack Web Development Bootcamp. The site introduces me as an aspiring full-stack web developer and showcases my current skills, projects, contact information, and professional links.
 
 ## Live Demo
 
 > Add your GitHub Pages link here after deployment.
 
-[View Portfolio](https://YOUR-USERNAME.github.io/personal-portfolio/)
+[View Portfolio](https://kaedeharakazuha26.github.io/portfolio-website/)
 
 ## Screenshot
 
 > Add a homepage screenshot to your `images/` folder, then update the path below.
 
-![Portfolio Homepage](images/portfolio-homepage.png)
+![Portfolio Homepage](images/portfolio-website.png)
+images
 
 ## Technologies Used
 
@@ -41,7 +43,7 @@ A responsive personal portfolio website by **Natassha Cua**, built as part of th
 ## Portfolio Sections
 
 ### Home / Hero
-Introduces **Natassha Cua** as an aspiring full-stack web developer and includes buttons for viewing projects and visiting GitHub.
+Introduces **Jhomar John Picar** as an aspiring full-stack web developer and includes buttons for viewing projects and visiting GitHub.
 
 ### About
 Provides a short introduction about current learning goals, front-end development skills, and plans to continue growing the portfolio.
@@ -111,7 +113,7 @@ Because Bootstrap is loaded through a CDN, an internet connection is needed for 
 ### Option 2: Clone with Git
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/personal-portfolio.git
+git clone https://github.com/kaedeharakazuha26/portfolio-website.git
 cd personal-portfolio
 ```
 
@@ -152,7 +154,7 @@ Aspiring Full-Stack Web Developer
 
 ### Professional Links
 
-- GitHub: https://github.com/YOUR-USERNAME
+- GitHub: https://github.com/kaedeharakazuha26
 - LinkedIn: https://www.linkedin.com/in/YOUR-USERNAME
 
 ---
