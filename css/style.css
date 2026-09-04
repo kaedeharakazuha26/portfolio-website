@@ -1,0 +1,341 @@
+/* ==========================================================================
+   Global Variables & Reset Overrides
+   ========================================================================== */
+:root {
+  --primary-color: #0d6efd;
+  --primary-hover: #0b5ed7;
+  --accent-color: #00f2fe;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --card-bg: #1e293b;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Custom Utility Classes used in HTML */
+.bg-dark-primary {
+  background-color: #0f172a;
+}
+
+.bg-dark-secondary {
+  background-color: #1e293b;
+}
+
+.bg-dark-card {
+  background-color: #1e293b !important;
+}
+
+.text-muted-custom {
+  color: var(--text-muted) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.link-accent {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.link-accent:hover {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.site-navbar {
+  background: rgba(15, 23, 42, 0.95) !important;
+  padding: 0.8rem 0;
+}
+
+.brand-mark {
+  background: linear-gradient(135deg, #0d6efd, var(--accent-color));
+  color: #fff;
+  font-weight: 800;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 10px rgba(13, 110, 253, 0.4);
+}
+
+.brand-text strong {
+  font-size: 1.1rem;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+}
+
+.brand-text small {
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #cbd5e1 !important;
+  position: relative;
+  transition: var(--transition-fast);
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--accent-color);
+  transition: var(--transition-fast);
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  background: var(--bg-gradient);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(13, 110, 253, 0.25) 0%, rgba(255,255,255,0) 70%);
+  pointer-events: none;
+}
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.hero-description {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Profile Image Styling */
+.profile-image {
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-fast);
+  object-fit: cover;
+}
+
+.profile-image:hover {
+  transform: scale(1.03) rotate(1deg);
+  border-color: var(--accent-color);
+  box-shadow: 0 25px 50px rgba(0, 242, 254, 0.2);
+}
+
+/* ==========================================================================
+   General Section Styles
+   ========================================================================== */
+.section-space {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-band {
+  position: relative;
+}
+
+/* ==========================================================================
+   Skill Cards
+   ========================================================================== */
+.skill-card {
+  border: 1px solid #334155;
+  border-radius: 16px;
+  background: #1e293b;
+  transition: var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
+  border-color: var(--primary-color);
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #475569;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.skill-card:hover .skill-number {
+  color: var(--accent-color);
+}
+
+/* ==========================================================================
+   Project Cards
+   ========================================================================== */
+.project-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4) !important;
+  border-color: #475569;
+}
+
+.project-visual {
+  height: 180px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  border-bottom: 1px solid #334155;
+}
+
+.project-number {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.project-tags .badge {
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+  border-radius: 6px;
+  color: #e2e8f0;
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+}
+
+/* ==========================================================================
+   Contact Form & Footer
+   ========================================================================== */
+.contact-form {
+  border: 1px solid #334155;
+  border-radius: 16px;
+  background: #1e293b;
+}
+
+.contact-form .form-control {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  transition: var(--transition-fast);
+}
+
+.contact-form .form-control:focus {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+}
+
+.contact-form .form-control::placeholder {
+  color: #64748b;
+}
+
+.site-footer {
+  border-top: 1px solid #334155;
+  background-color: #0f172a !important;
+}
+
+/* ==========================================================================
+   Buttons Customization
+   ========================================================================== */
+.btn {
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 110, 253, 0.4);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
+}
