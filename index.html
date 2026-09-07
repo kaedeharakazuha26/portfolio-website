@@ -46,6 +46,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -59,18 +60,18 @@
             <div class="container">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-7 order-2 order-lg-1">
-                        <p class="section-kicker mb-2">Hello, I'm</p>
-                        <h1 id="hero-title" class="display-3 fw-bold mb-3">Jhomar John Picar</h1>
-                        <p class="lead fw-semibold text-accent mb-3">
+                        <p class="section-kicker mb-2 reveal">Hello, I'm</p>
+                        <h1 id="hero-title" class="display-3 fw-bold mb-3 reveal">Jhomar John Picar</h1>
+                        <p class="lead fw-semibold text-accent mb-3 hero-role reveal">
                             Aspiring Full-Stack Web Developer
                         </p>
-                        <p class="hero-description mb-4">
+                        <p class="hero-description mb-4 reveal">
                             I am currently learning Full-Stack Web Development with MST Connect PH.
                             I enjoy building clean, responsive, and useful web experiences while
                             growing my skills one project at a time.
                         </p>
 
-                        <div class="d-flex flex-wrap gap-2">
+                        <div class="d-flex flex-wrap gap-2 reveal">
                             <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
                             <a href="https://github.com/kaedeharakazuha26" class="btn btn-outline-light btn-lg">GitHub</a>
                         </div>
@@ -132,8 +133,10 @@
                     </p>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-sm-6 col-lg-3">
+                <div class="content-carousel" data-carousel="skills">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                    <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
                                 <span class="skill-number">01</span>
@@ -144,8 +147,7 @@
                             </div>
                         </article>
                     </div>
-
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
                                 <span class="skill-number">02</span>
@@ -156,8 +158,7 @@
                             </div>
                         </article>
                     </div>
-
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
                                 <span class="skill-number">03</span>
@@ -168,8 +169,7 @@
                             </div>
                         </article>
                     </div>
-
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
                                 <span class="skill-number">04</span>
@@ -179,6 +179,83 @@
                                 </p>
                             </div>
                         </article>
+                    </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls" aria-label="Skills carousel controls">
+                        <button class="carousel-control carousel-button-prev" type="button" data-carousel-prev aria-label="Show previous skills">←</button>
+                        <span class="carousel-status" aria-live="polite"></span>
+                        <button class="carousel-control carousel-button-next" type="button" data-carousel-next aria-label="Show more skills">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates -->
+        <section id="certificates" class="section-band certificate-section">
+            <div class="container section-space">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5">
+                        <p class="section-kicker mb-2">Credentials</p>
+                        <h2 class="display-6 fw-bold mb-3 text-white">Proof of progress</h2>
+                        <p class="lead text-muted-custom mb-4">
+                            Every certificate represents a new skill, a completed challenge, and another step toward becoming a full-stack developer.
+                        </p>
+                        <div class="credential-note">
+                            <span class="credential-dot"></span>
+                            <span>More credentials will be added as I continue learning.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="content-carousel" data-carousel="certificates">
+                            <div class="carousel-viewport">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide">
+                                        <article class="certificate-card" data-tilt>
+                                            <div class="certificate-image-wrap">
+                                                <img src="images/certificate-placeholder.svg" alt="Certificate placeholder - replace with your certificate image" class="certificate-image">
+                                                <span class="certificate-stamp">01</span>
+                                            </div>
+                                            <div class="certificate-content">
+                                                <div>
+                                                    <p class="certificate-label mb-2">Certificate of completion</p>
+                                                    <h3 class="h4 text-white mb-2">Full-Stack Web Development</h3>
+                                                    <p class="text-muted-custom mb-0">MST Connect PH Bootcamp</p>
+                                                </div>
+                                                <a class="certificate-link" href="images/certificate-placeholder.svg" target="_blank" rel="noopener">View certificate <span aria-hidden="true">↗</span></a>
+                                            </div>
+                                        </article>
+                                    </div>
+
+
+                                    <div class="carousel-slide">
+                                        <article class="certificate-card" data-tilt>
+                                            <div class="certificate-image-wrap">
+                                                <img src="images/certificate-placeholder.svg" alt="Certificate placeholder - replace with your certificate image" class="certificate-image">
+                                                <span class="certificate-stamp">01</span>
+                                            </div>
+                                            <div class="certificate-content">
+                                                <div>
+                                                    <p class="certificate-label mb-2">Certificate of completion</p>
+                                                    <h3 class="h4 text-white mb-2">Full-Stack Web Development</h3>
+                                                    <p class="text-muted-custom mb-0">MST Connect PH Bootcamp</p>
+                                                </div>
+                                                <a class="certificate-link" href="images/certificate-placeholder.svg" target="_blank" rel="noopener">View certificate <span aria-hidden="true">↗</span></a>
+                                            </div>
+                                        </article>
+                                    </div>
+
+
+                                    <!-- Add more certificate slides here when new credentials are available. -->
+                                     
+                                </div>
+                            </div>
+                            <div class="carousel-controls" aria-label="Certificates carousel controls">
+                                <button class="carousel-control carousel-button-prev" type="button" data-carousel-prev aria-label="Show previous certificate">←</button>
+                                <span class="carousel-status" aria-live="polite"></span>
+                                <button class="carousel-control carousel-button-next" type="button" data-carousel-next aria-label="Show more certificates">→</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,70 +272,79 @@
                     </p>
                 </div>
 
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <article class="project-card card h-100 border-secondary">
-                            <div class="project-visual d-flex align-items-center justify-content-center" aria-hidden="true">
-                                <span>Portfolio Preview</span>
+                <div class="content-carousel" data-carousel="projects">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <article class="project-card card h-100 border-secondary">
+                                    <div class="project-visual d-flex align-items-center justify-content-center" aria-hidden="true">
+                                        <span>Portfolio Preview</span>
+                                    </div>
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <span class="project-number">01</span>
+                                        <h3 class="h4 card-title text-white">Personal Portfolio</h3>
+                                        <p class="card-text text-muted-custom">
+                                            A responsive personal portfolio built with semantic HTML, Bootstrap,
+                                            custom CSS, and mobile-first design.
+                                        </p>
+                                        <div class="project-tags d-flex flex-wrap gap-2 mb-4" aria-label="Technologies used">
+                                            <span class="badge text-bg-dark border border-secondary">HTML</span>
+                                            <span class="badge text-bg-dark border border-secondary">CSS</span>
+                                            <span class="badge text-bg-dark border border-secondary">Bootstrap</span>
+                                        </div>
+                                        <div class="d-flex flex-wrap gap-2 mt-auto">
+                                            <a href="https://github.com/kaedeharakazuha26/portfolio-website" class="btn btn-primary">GitHub</a>
+                                            <a href="https://kaedeharakazuha26.github.io/portfolio-website/" class="btn btn-outline-light" aria-label="Ask about the live demo">Live Demo</a>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
-                            <div class="card-body p-4 d-flex flex-column">
-                                <span class="project-number">01</span>
-                                <h3 class="h4 card-title text-white">Personal Portfolio</h3>
-                                <p class="card-text text-muted-custom">
-                                    A responsive personal portfolio built with semantic HTML, Bootstrap,
-                                    custom CSS, and mobile-first design.
-                                </p>
-                                <div class="project-tags d-flex flex-wrap gap-2 mb-4" aria-label="Technologies used">
-                                    <span class="badge text-bg-dark border border-secondary">HTML</span>
-                                    <span class="badge text-bg-dark border border-secondary">CSS</span>
-                                    <span class="badge text-bg-dark border border-secondary">Bootstrap</span>
-                                </div>
-                                <div class="d-flex flex-wrap gap-2 mt-auto">
-                                    <a href="https://github.com/kaedeharakazuha26/portfolio-website" class="btn btn-primary">GitHub</a>
-                                    <a href="#" class="btn btn-outline-light" aria-label="Live demo link placeholder">Live Demo</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
 
-                    <div class="col-md-6 col-lg-4">
-                        <article class="project-card card h-100 border-secondary">
-                            <div class="project-visual d-flex align-items-center justify-content-center" aria-hidden="true">
-                                <span>Project Preview</span>
+                            <div class="carousel-slide">
+                                <article class="project-card card h-100 border-secondary">
+                                    <div class="project-visual d-flex align-items-center justify-content-center" aria-hidden="true">
+                                        <span>Project Preview</span>
+                                    </div>
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <span class="project-number">02</span>
+                                        <h3 class="h4 card-title text-white">Future Project</h3>
+                                        <p class="card-text text-muted-custom">
+                                            A responsive personal portfolio built with semantic HTML, Bootstrap,
+                                            custom CSS, and mobile-first design.
+                                        </p>
+                                        <div class="project-tags d-flex flex-wrap gap-2 mb-4">
+                                            <span class="badge text-bg-dark border border-secondary">Coming soon</span>
+                                        </div>
+                                        <p class="small text-muted-custom mt-auto mb-0">Repository and live demo links coming soon.</p>
+                                    </div>
+                                </article>
                             </div>
-                            <div class="card-body p-4 d-flex flex-column">
-                                <span class="project-number">02</span>
-                                <h3 class="h4 card-title text-white">Future Project</h3>
-                                <p class="card-text text-muted-custom">
-                                     A responsive personal portfolio built with semantic HTML, Bootstrap,
-                                    custom CSS, and mobile-first design.
-                                </p>
-                                <div class="project-tags d-flex flex-wrap gap-2 mb-4">
-                                    <span class="badge text-bg-dark border border-secondary">Coming soon</span>
-                                </div>
-                                <p class="small text-muted-custom mt-auto mb-0">Repository and live demo links coming soon.</p>
-                            </div>
-                        </article>
-                    </div>
 
-                    <div class="col-md-6 col-lg-4">
-                        <article class="project-card card h-100 border-secondary">
-                            <div class="project-visual d-flex align-items-center justify-content-center" aria-hidden="true">
-                                <span>Project Preview</span>
+                            <div class="carousel-slide">
+                                <article class="project-card card h-100 border-secondary">
+                                    <div class="project-visual d-flex align-items-center justify-content-center" aria-hidden="true">
+                                        <span>Project Preview</span>
+                                    </div>
+                                    <div class="card-body p-4 d-flex flex-column">
+                                        <span class="project-number">03</span>
+                                        <h3 class="h4 card-title text-white">Future Project</h3>
+                                        <p class="card-text text-muted-custom">
+                                            A responsive personal portfolio built with semantic HTML, Bootstrap,
+                                            custom CSS, and mobile-first design.
+                                        </p>
+                                        <div class="project-tags d-flex flex-wrap gap-2 mb-4">
+                                            <span class="badge text-bg-dark border border-secondary">Coming soon</span>
+                                        </div>
+                                        <p class="small text-muted-custom mt-auto mb-0">Repository and live demo links coming soon.</p>
+                                    </div>
+                                </article>
                             </div>
-                            <div class="card-body p-4 d-flex flex-column">
-                                <span class="project-number">03</span>
-                                <h3 class="h4 card-title text-white">Future Project</h3>
-                                <p class="card-text text-muted-custom">
-                                    A responsive personal portfolio built with semantic HTML, Bootstrap,
-                                    custom CSS, and mobile-first design.
-                                </p>
-                                <div class="project-tags d-flex flex-wrap gap-2 mb-4">
-                                    <span class="badge text-bg-dark border border-secondary">Coming soon</span>
-                                </div>
-                                <p class="small text-muted-custom mt-auto mb-0">Repository and live demo links coming soon.</p>
-                            </div>
-                        </article>
+                        </div>
+                    </div>
+                    <div class="carousel-controls" aria-label="Projects carousel controls">
+                        <button class="carousel-control carousel-button-prev" type="button" data-carousel-prev aria-label="Show previous project">←</button>
+                        <span class="carousel-status" aria-live="polite"></span>
+                        <button class="carousel-control carousel-button-next" type="button" data-carousel-next aria-label="Show more projects">→</button>
                     </div>
                 </div>
             </div>
@@ -282,7 +368,7 @@
                     </div>
 
                     <div class="col-lg-7">
-                        <form class="contact-form card shadow-lg p-4 p-md-5 border-secondary bg-dark-card" action="#" method="post">
+                        <form class="contact-form card shadow-lg p-4 p-md-5 border-secondary bg-dark-card" id="contact-form" action="#" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label fw-semibold text-white">Name</label>
                                 <input type="text" class="form-control form-control-dark" id="name" name="name" autocomplete="name" required>
@@ -302,6 +388,7 @@
                                 <button type="submit" class="btn btn-primary">Send Message</button>
                             </div>
 
+                            <p class="form-feedback small mt-3 mb-0" role="status" aria-live="polite"></p>
                             <p class="small text-muted-custom mt-3 mb-0">
                                 I'll get back to you as soon as possible!
                             </p>
@@ -321,5 +408,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
