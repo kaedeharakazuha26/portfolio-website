@@ -85,6 +85,79 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCarousel();
     });
 
+    // Theme switcher (Light / Dark mode)
+    const themeToggleBtn = document.querySelector("#theme-toggle");
+    const darkIcon = document.querySelector(".theme-icon-dark");
+    const lightIcon = document.querySelector(".theme-icon-light");
+
+    const getPreferredTheme = () => {
+        const storedTheme = localStorage.getItem("theme");
+        if (storedTheme) return storedTheme;
+        return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    };
+
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        if (theme === "light") {
+            if (darkIcon) darkIcon.classList.add("d-none");
+            if (lightIcon) lightIcon.classList.remove("d-none");
+        } else {
+            if (darkIcon) darkIcon.classList.remove("d-none");
+            if (lightIcon) lightIcon.classList.add("d-none");
+        }
+    };
+
+    const currentTheme = getPreferredTheme();
+    applyTheme(currentTheme);
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", () => {
+            const current = document.documentElement.getAttribute("data-bs-theme") || "dark";
+            const next = current === "dark" ? "light" : "dark";
+            localStorage.setItem("theme", next);
+            applyTheme(next);
+        });
+    }
+
+    // Typewriter effect
+    const typewriterElement = document.querySelector(".typewriter-text");
+    if (typewriterElement && !reduceMotion) {
+        const words = JSON.parse(typewriterElement.getAttribute("data-typewriter") || "[]");
+        if (words.length > 0) {
+            let wordIndex = 0;
+            let charIndex = words[0].length;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            const type = () => {
+                const currentWord = words[wordIndex];
+                if (isDeleting) {
+                    typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 90;
+                }
+
+                if (!isDeleting && charIndex === currentWord.length) {
+                    typingSpeed = 2200; // Pause after finishing word
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typingSpeed = 400; // Pause before typing next word
+                }
+
+                setTimeout(type, typingSpeed);
+            };
+
+            // Start typing cycle after initial display
+            setTimeout(type, 2000);
+        }
+    }
+
     if (contactForm) {
         contactForm.addEventListener("submit", (event) => {
             event.preventDefault();

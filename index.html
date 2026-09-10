@@ -11,7 +11,10 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
-
+    <!-- Devicon Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="css/style.css">
     
@@ -45,9 +48,20 @@
                     <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects &amp; Timeline</a></li>
                         <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item ms-lg-2 my-2 my-lg-0">
+                            <a href="#resume" class="btn btn-outline-info btn-sm d-inline-flex align-items-center gap-1" id="nav-resume-btn" download="Jhomar_John_Picar_Resume.pdf">
+                                <i class="bi bi-file-earmark-person"></i> Resume
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-1">
+                            <button id="theme-toggle" class="btn btn-sm btn-theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+                                <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                                <i class="bi bi-sun-fill theme-icon-light d-none"></i>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +77,7 @@
                         <p class="section-kicker mb-2 reveal">Hello, I'm</p>
                         <h1 id="hero-title" class="display-3 fw-bold mb-3 reveal">Jhomar John Picar</h1>
                         <p class="lead fw-semibold text-accent mb-3 hero-role reveal">
-                            Aspiring Full-Stack Web Developer
+                            <span class="typewriter-text" data-typewriter='["Aspiring Full-Stack Web Developer", "Frontend & UI Developer", "Problem Solver & Tech Enthusiast"]'>Aspiring Full-Stack Web Developer</span><span class="typewriter-cursor">|</span>
                         </p>
                         <p class="hero-description mb-4 reveal">
                             I am currently learning Full-Stack Web Development with MST Connect PH.
@@ -71,9 +85,28 @@
                             growing my skills one project at a time.
                         </p>
 
+                        <!-- Tech Stack Quick Strip -->
+                        <div class="hero-tech-stack d-flex flex-wrap align-items-center gap-3 mb-4 reveal">
+                            <span class="tech-stack-label text-muted-custom small fw-semibold">Tech Stack:</span>
+                            <div class="tech-icons-strip d-flex align-items-center gap-3">
+                                <i class="devicon-html5-plain colored fs-3" title="HTML5"></i>
+                                <i class="devicon-css3-plain colored fs-3" title="CSS3"></i>
+                                <i class="devicon-javascript-plain colored fs-3" title="JavaScript"></i>
+                                <i class="devicon-bootstrap-plain colored fs-3" title="Bootstrap 5"></i>
+                                <i class="devicon-git-plain colored fs-3" title="Git"></i>
+                                <i class="devicon-github-original fs-3" title="GitHub"></i>
+                                <i class="devicon-nodejs-plain colored fs-3" title="Node.js"></i>
+                            </div>
+                        </div>
+
                         <div class="d-flex flex-wrap gap-2 reveal">
                             <a href="#projects" class="btn btn-primary btn-lg">View My Projects</a>
-                            <a href="https://github.com/kaedeharakazuha26" class="btn btn-outline-light btn-lg">GitHub</a>
+                            <a href="https://github.com/kaedeharakazuha26" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-2">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                            <a href="#resume" class="btn btn-outline-info btn-lg d-inline-flex align-items-center gap-2" id="hero-resume-btn" download="Jhomar_John_Picar_Resume.pdf">
+                                <i class="bi bi-file-earmark-arrow-down"></i> Resume / CV
+                            </a>
                         </div>
                     </div>
 
@@ -139,8 +172,11 @@
                     <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
-                                <span class="skill-number">01</span>
-                                <h3 class="h4 card-title text-white">HTML</h3>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="skill-number">01</span>
+                                    <i class="devicon-html5-plain colored fs-1 skill-icon"></i>
+                                </div>
+                                <h3 class="h4 card-title text-white">HTML5</h3>
                                 <p class="card-text text-muted-custom mb-0">
                                     Semantic structure, accessible markup, and clean document organization.
                                 </p>
@@ -148,15 +184,16 @@
                         </article>
                     </div>
 
-                
-
                     <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
-                                <span class="skill-number">02</span>
-                                <h3 class="h4 card-title text-white">CSS</h3>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="skill-number">02</span>
+                                    <i class="devicon-css3-plain colored fs-1 skill-icon"></i>
+                                </div>
+                                <h3 class="h4 card-title text-white">CSS3</h3>
                                 <p class="card-text text-muted-custom mb-0">
-                                    Responsive styling, media queries, spacing, typography, and custom components.
+                                    Responsive styling, flexbox, CSS grid, media queries, spacing, typography, and custom animations.
                                 </p>
                             </div>
                         </article>
@@ -164,10 +201,27 @@
                     <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
-                                <span class="skill-number">03</span>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="skill-number">03</span>
+                                    <i class="devicon-javascript-plain colored fs-1 skill-icon"></i>
+                                </div>
+                                <h3 class="h4 card-title text-white">JavaScript</h3>
+                                <p class="card-text text-muted-custom mb-0">
+                                    DOM manipulation, asynchronous operations, event handling, ES6+ syntax, and modern web logic.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="carousel-slide">
+                        <article class="skill-card card h-100 border-secondary">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="skill-number">04</span>
+                                    <i class="devicon-bootstrap-plain colored fs-1 skill-icon"></i>
+                                </div>
                                 <h3 class="h4 card-title text-white">Bootstrap</h3>
                                 <p class="card-text text-muted-custom mb-0">
-                                    Containers, grid columns, utilities, navigation, cards, forms, and breakpoints.
+                                    Containers, responsive grid columns, utilities, navigation, cards, forms, and breakpoints.
                                 </p>
                             </div>
                         </article>
@@ -175,10 +229,13 @@
                     <div class="carousel-slide">
                         <article class="skill-card card h-100 border-secondary">
                             <div class="card-body p-4">
-                                <span class="skill-number">04</span>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="skill-number">05</span>
+                                    <i class="devicon-git-plain colored fs-1 skill-icon"></i>
+                                </div>
                                 <h3 class="h4 card-title text-white">Git &amp; GitHub</h3>
                                 <p class="card-text text-muted-custom mb-0">
-                                    Version control, commits, repositories, deployment, and development workflow.
+                                    Version control, commits, branching, pull requests, repositories, and GitHub Pages deployment.
                                 </p>
                             </div>
                         </article>
@@ -270,12 +327,20 @@
         <!-- Projects: 1 card mobile, 2 medium, 3 large -->
         <section id="projects" class="section-band bg-dark-secondary">
             <div class="container section-space">
-                <div class="section-heading mb-4 mb-lg-5">
-                    <p class="section-kicker mb-2">Projects</p>
-                    <h2 class="display-6 fw-bold mb-3 text-white">Selected work</h2>
-                    <p class="lead text-muted-custom mb-0">
-                        A growing collection of projects that show what I am currently building and learning.
-                    </p>
+                <div class="section-heading mb-4 mb-lg-5 d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3">
+                    <div>
+                        <p class="section-kicker mb-2">Projects</p>
+                        <h2 class="display-6 fw-bold mb-3 text-white">Selected work</h2>
+                        <p class="lead text-muted-custom mb-0">
+                            A growing collection of projects that show what I am currently building and learning.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="projects.html" class="btn btn-outline-info text-nowrap d-inline-flex align-items-center gap-2">
+                            <span>Explore All Projects &amp; Timeline</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="content-carousel" data-carousel="projects">
