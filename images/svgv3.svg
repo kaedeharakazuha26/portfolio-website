@@ -1,0 +1,149 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070B12"/><stop offset="0.55" stop-color="#0D1422"/><stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="70" y1="0" x2="1120" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/><stop offset="0.48" stop-color="#38BDF8"/><stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#10B981"/><stop offset="1" stop-color="#4ADE80"/></linearGradient>
+    <radialGradient id="spot"><stop stop-color="#38BDF8" stop-opacity=".16"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#334155" stroke-opacity=".18" stroke-width="1"/></pattern>
+    <clipPath id="clip"><rect width="1200" height="480" rx="24"/></clipPath>
+  </defs>
+
+  <style>
+    .sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    @keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-12px)}}
+    @keyframes pulse{0%,100%{opacity:.35;transform:scale(.9)}50%{opacity:1;transform:scale(1.25)}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes dash{to{stroke-dashoffset:-24}}
+    @keyframes shimmer{0%{transform:translateX(-180px);opacity:0}20%{opacity:.8}70%{opacity:.8}100%{transform:translateX(1180px);opacity:0}}
+    @keyframes scan{0%{transform:translateY(0);opacity:0}10%{opacity:.7}90%{opacity:.7}100%{transform:translateY(430px);opacity:0}}
+    @keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+    @keyframes blink{50%{opacity:0}}
+    @keyframes type1{0%,20%{opacity:1}24%,100%{opacity:0}}
+    @keyframes type2{0%,24%{opacity:0}28%,53%{opacity:1}57%,100%{opacity:0}}
+    @keyframes type3{0%,57%{opacity:0}61%,91%{opacity:1}95%,100%{opacity:0}}
+    @keyframes borderPulse{0%,100%{stroke-opacity:.35}50%{stroke-opacity:1}}
+    .orb1{animation:drift 9s ease-in-out infinite}
+    .orb2{animation:drift 12s ease-in-out infinite reverse}
+    .dot{animation:pulse 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .atom{animation:spin 12s linear infinite;transform-origin:1000px 116px}
+    .flow{stroke-dasharray:6 6;animation:dash 1.2s linear infinite}
+    .flow2{stroke-dasharray:3 7;animation:dash .8s linear infinite reverse}
+    .shine{animation:shimmer 7s ease-in-out infinite}
+    .scan{animation:scan 6s linear infinite}
+    .float1{animation:float1 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .float2{animation:float2 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .cursor{animation:blink .8s steps(1) infinite}
+    .q1{animation:type1 15s infinite;opacity:1}.q2{animation:type2 15s infinite;opacity:0}.q3{animation:type3 15s infinite;opacity:0}
+    .pulseBorder{animation:borderPulse 3s ease-in-out infinite}
+  </style>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="480" rx="24" fill="url(#bg)"/>
+    <rect width="1200" height="480" fill="url(#grid)"/>
+    <circle class="orb1" cx="1040" cy="85" r="260" fill="url(#spot)"/>
+    <circle class="orb2" cx="120" cy="440" r="220" fill="url(#spot)" opacity=".55"/>
+    <rect class="scan" x="0" y="0" width="1200" height="2" fill="#38BDF8" opacity=".5" filter="url(#softGlow)"/>
+    <rect class="shine" x="0" y="0" width="120" height="480" fill="url(#accent)" opacity=".08" transform="skewX(-18)"/>
+
+    <!-- border -->
+    <rect x="1.5" y="1.5" width="1197" height="477" rx="23" stroke="#26354D" stroke-width="3"/>
+    <rect class="pulseBorder" x="2" y="2" width="1196" height="476" rx="22" stroke="url(#accent)" stroke-width="1"/>
+
+    <!-- status -->
+    <g transform="translate(58 46)">
+      <circle cx="0" cy="9" r="6" fill="#10B981" filter="url(#glow)" class="dot"/>
+      <text x="18" y="14" class="mono" font-size="14" font-weight="700" letter-spacing="2" fill="#34D399">OPEN TO OPPORTUNITIES</text>
+    </g>
+
+    <!-- main copy -->
+    <text x="58" y="116" class="mono" font-size="16" font-weight="800" letter-spacing="3" fill="#38BDF8">FULL-STACK WEB DEVELOPER</text>
+    <text x="58" y="170" class="sans" font-size="48" font-weight="800" letter-spacing="-1.2" fill="#F8FAFC">Jhomar John Picar</text>
+    <text x="58" y="202" class="sans" font-size="17" fill="#94A3B8">Bridging 7 Years of IT Technical Support into Modern Web Engineering</text>
+
+    <!-- tech pills: fixed animation wrappers so each pill keeps its position -->
+    <g transform="translate(58 230)">
+      <g>
+        <g class="float1">
+          <rect width="92" height="32" rx="16" fill="#0D1728" stroke="#24344D"/>
+          <text x="46" y="21" class="mono" font-size="13" text-anchor="middle" fill="#38BDF8">React</text>
+        </g>
+      </g>
+      <g transform="translate(104 0)">
+        <g class="float2">
+          <rect width="100" height="32" rx="16" fill="#0D1728" stroke="#24344D"/>
+          <text x="50" y="21" class="mono" font-size="13" text-anchor="middle" fill="#4ADE80">Node.js</text>
+        </g>
+      </g>
+      <g transform="translate(216 0)">
+        <g class="float1">
+          <rect width="112" height="32" rx="16" fill="#0D1728" stroke="#24344D"/>
+          <text x="56" y="21" class="mono" font-size="13" text-anchor="middle" fill="#22C55E">MongoDB</text>
+        </g>
+      </g>
+      <g transform="translate(340 0)">
+        <g class="float2">
+          <rect width="98" height="32" rx="16" fill="#0D1728" stroke="#24344D"/>
+          <text x="49" y="21" class="mono" font-size="13" text-anchor="middle" fill="#CBD5E1">Express</text>
+        </g>
+      </g>
+      <g transform="translate(450 0)">
+        <g class="float1">
+          <rect width="108" height="32" rx="16" fill="#0D1728" stroke="#24344D"/>
+          <text x="54" y="21" class="mono" font-size="13" text-anchor="middle" fill="#FB7185">REST API</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- decorative code card -->
+    <g transform="translate(58 288)">
+      <rect width="590" height="92" rx="14" fill="#070C15" stroke="#26354D"/>
+      <circle cx="20" cy="20" r="4" fill="#F87171"/><circle cx="34" cy="20" r="4" fill="#FBBF24"/><circle cx="48" cy="20" r="4" fill="#34D399"/>
+      <text x="22" y="51" class="mono" font-size="13" fill="#64748B">const</text><text x="72" y="51" class="mono" font-size="13" fill="#38BDF8">developer</text><text x="157" y="51" class="mono" font-size="13" fill="#CBD5E1">= {</text><text x="181" y="51" class="mono" font-size="13" fill="#A78BFA">problemSolver</text><text x="289" y="51" class="mono" font-size="13" fill="#CBD5E1">: true,</text>
+      <text x="22" y="73" class="mono" font-size="13" fill="#22C55E">experience</text><text x="111" y="73" class="mono" font-size="13" fill="#CBD5E1">: </text><text x="124" y="73" class="mono" font-size="13" fill="#FBBF24">"IT → Web Engineering"</text><text x="293" y="73" class="mono" font-size="13" fill="#CBD5E1">};</text>
+      <rect class="cursor" x="306" y="62" width="7" height="15" rx="1" fill="#38BDF8"/>
+    </g>
+
+    <!-- right architecture -->
+    <g transform="translate(760 58)">
+      <text x="0" y="0" class="mono" font-size="12" letter-spacing="2" fill="#64748B">SYSTEM FLOW</text>
+      <!-- atom -->
+      <g class="atom">
+        <ellipse cx="240" cy="58" rx="48" ry="18" stroke="#38BDF8" stroke-width="2"/>
+        <ellipse cx="240" cy="58" rx="48" ry="18" stroke="#38BDF8" stroke-width="2" transform="rotate(60 240 58)"/>
+        <ellipse cx="240" cy="58" rx="48" ry="18" stroke="#38BDF8" stroke-width="2" transform="rotate(120 240 58)"/>
+        <circle cx="240" cy="58" r="6" fill="#38BDF8" filter="url(#glow)"/>
+      </g>
+      <!-- nodes -->
+      <g transform="translate(165 98)"><rect width="150" height="42" rx="9" fill="#0D1728" stroke="#38BDF8" stroke-width="2"/><text x="75" y="27" class="mono" font-size="14" text-anchor="middle" fill="#38BDF8">&lt;Client /&gt;</text></g>
+      <path d="M240 140V168H105V188M240 168H375V188" stroke="#334155" stroke-width="2"/>
+      <path class="flow" d="M240 140V168H105V188" stroke="#38BDF8" stroke-width="2"/>
+      <path class="flow2" d="M240 168H375V188" stroke="#4ADE80" stroke-width="2"/>
+      <g transform="translate(35 188)"><rect width="140" height="44" rx="9" fill="#0D1728" stroke="#334155"/><circle cx="20" cy="22" r="5" fill="#38BDF8" class="dot"/><text x="84" y="27" class="mono" font-size="13" text-anchor="middle" fill="#CBD5E1">Node / API</text></g>
+      <g transform="translate(305 188)"><rect width="140" height="44" rx="9" fill="#0D1728" stroke="#334155"/><circle cx="20" cy="22" r="5" fill="#4ADE80" class="dot"/><text x="84" y="27" class="mono" font-size="13" text-anchor="middle" fill="#CBD5E1">MongoDB</text></g>
+      <text x="240" y="264" class="mono" font-size="11" text-anchor="middle" fill="#475569">BUILD • DEPLOY • SCALE</text>
+    </g>
+
+    <!-- bottom terminal -->
+    <g transform="translate(690 350)">
+      <rect width="450" height="54" rx="12" fill="#070C15" stroke="#26354D"/>
+      <text x="18" y="34" class="mono" font-size="16" font-weight="700" fill="#38BDF8">&gt;</text>
+      <g class="q1"><text x="44" y="34" class="mono" font-size="13" fill="#E2E8F0">Build. Learn. Solve. Repeat. 🚀</text></g>
+      <g class="q2"><text x="44" y="34" class="mono" font-size="13" fill="#E2E8F0">Turning IT troubleshooting into production code.</text></g>
+      <g class="q3"><text x="44" y="34" class="mono" font-size="13" fill="#E2E8F0">Currently building full-stack web applications.</text></g>
+      <rect class="cursor" x="415" y="20" width="7" height="16" rx="1" fill="#38BDF8"/>
+    </g>
+
+    <!-- tiny particles -->
+    <g fill="#38BDF8">
+      <circle cx="714" cy="72" r="2" class="dot"/><circle cx="1140" cy="116" r="2" class="dot"/><circle cx="676" cy="198" r="1.5" class="dot"/><circle cx="1110" cy="315" r="2" class="dot"/>
+    </g>
+  </g>
+</svg>
